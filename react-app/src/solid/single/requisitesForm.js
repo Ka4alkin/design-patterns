@@ -2,7 +2,8 @@ const RequisitesForm = (props) => {
     const {
         title,
         onSave,
-        onReset
+        onReset,
+        content
     } = props
     const onSaveForm = (e) =>{
         e.preventDefault()
@@ -15,6 +16,7 @@ const RequisitesForm = (props) => {
     return (
         <form action="">
             <h1>{title}</h1>
+            {content ? content : null}
             <input type="text" placeholder="ИИН"/>
             <input type="text" placeholder="БИК"/>
             <input type="text" placeholder="НАЗВАНИЕ БАНКА"/>
